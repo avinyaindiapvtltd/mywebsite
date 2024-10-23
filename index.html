@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<title>Avinya India Pvt Ltd</title>
+		  
 </head>
 <body>
 
@@ -276,7 +277,7 @@
 	<!-- Blog end -->
 
 	<!-- Quotes -->
-	<section class="fh5co-quotes">
+<!--	<section class="fh5co-quotes">
 		<div class="site-container">
 			<div class="about-me-slider">
 				<div>
@@ -326,8 +327,8 @@
 					</div>
 					<div class="footer-info__right">
 						<h5>Get In Touch</h5>
-						<p class="footer-phone">Phone: +958734902847</p>
-						<p>Email : Jhone@Example.com</p>
+						<p class="footer-phone">Phone: Please Fill the Form to Contact</p>
+						<p>Email : avinyaindiapvtltd@gmail.com</p>
 						<div class="social-icons">
 							<a href="#" target="_blank"><img src="./images/social-twitter.png" alt="social icon"></a>
 							<a href="#" target="_blank"><img src="./images/social-pinterest.png" alt="social icon"></a>
@@ -336,7 +337,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer-contact-form">
+			<!--	<div class="footer-contact-form">
 					<h5>Contact Form</h5>
 					<form class="contact-form">
 						<div class="contact-form__input">
@@ -347,7 +348,51 @@
 						<input type="submit" name="submit" value="Submit" class="submit-button">
 					</form>
 				</div>
+			</div>-->
+		
+	<h2>Contact Us</h2>
+		<div class="footer-contact-form> 
+		<form id="contactForm">
+			<div class="form-group">
+        <label for="name">Name <span style="color:red;">*</span></label>
+        <input type="text" id="name" name="name" required>
 			</div>
+			<div class="form-group">
+			<label for="email">Email <span style="color:red;">*</span></label>
+			<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="contact">Contact Number <span style="color:red;">*</span></label>
+				<input type="tel" id="contact" name="contact" required>
+				</div>
+				<div class="form-group">
+					<label for="description">Description <span style="color:red;">*</span></label>
+					<textarea id="description" name="description" required></textarea>
+					</div>
+					<button type="submit">Send Message</button>
+				</form>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Gather form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const contact = document.getElementById('contact').value;
+        const description = document.getElementById('description').value;
+
+        // Create a WhatsApp message
+        const message = `Name: ${name}%0AEmail: ${email}%0AContact: ${contact}%0ADescription: ${description}`;
+        
+        // WhatsApp API URL (replace '1234567890' with the receiver's WhatsApp number)
+        const phoneNumber = '+971582625346'; // Receiver's WhatsApp number
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+        // Redirect to WhatsApp
+        window.open(whatsappURL, '_blank');
+    });
+</script> </div>
 		</div>
 		<div class="footer-bottom">
 			<div class="site-container footer-bottom-inner">
